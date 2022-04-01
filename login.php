@@ -22,11 +22,15 @@
          foreach ($lstAccount as $account){
              if (($account["TENTK"] == $UserName) && ($account["MATKHAU"] == $Password)) 
              {
-==
+                 if ($account["TRANGTHAI"] == "Đã khóa"){
+                    $message_account = "Tài khoản đã bị khóa !"; break;
+                 }
+                 else{
                     $account_present = $account;
                     setcookie("account_present_MATK", $account["MATK"], time()+3600*24*30, "/");
                     header("Location: http://localhost/WebBanXE/");
-=
+                 }
+                 
  
              }
              else {
