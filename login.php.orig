@@ -22,6 +22,16 @@
          foreach ($lstAccount as $account){
              if (($account["TENTK"] == $UserName) && ($account["MATKHAU"] == $Password)) 
              {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                 
+                    $account_present = $account;
+                    setcookie("account_present_MATK", $account["MATK"], time()+3600*24*30, "/");
+                    header("Location: http://localhost/WebBanXE/");
+                 
+=======
+>>>>>>> parent of 509b6b7 (logout)
                  if ($account["TRANGTHAI"] == "Đã khóa"){
                     $message_account = "Tài khoản đã bị khóa !"; break;
                  }
@@ -30,6 +40,10 @@
                     setcookie("account_present_MATK", $account["MATK"], time()+3600*24*30, "/");
                     header("Location: http://localhost/WebBanXE/");
                  }
+<<<<<<< HEAD
+=======
+>>>>>>> Baodev
+>>>>>>> parent of 509b6b7 (logout)
                  
  
              }
